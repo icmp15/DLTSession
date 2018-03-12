@@ -1,0 +1,58 @@
+﻿Setup geth client - in slides.
+
+
+Genesis json file (called myGensis_1984.json in our example)
+
+
+{
+   "config": {
+      "chainId": 1984,
+      "homesteadBlock": 0,
+      "eip155Block": 0,
+      "eip158Block": 0
+   },
+   "difficulty": "400",
+   "gasLimit": "2000000",
+   "alloc": {
+           "5c6c5ade01740571156e73f53a1b0ac837aeeea9": {
+          "balance": "1000"
+      }
+   }
+}
+-----------------------------------
+COMMANDS:
+
+
+geth account new 
+geth init myGenesis_1984.json 
+
+Start geth with an interactive console
+geth --maxpeers 2 --nodiscover --networkid 1984 console 2>>1984eth.log
+        <different commands in the interactive console>
+admin.nodeInfo.enode
+        admin.peers
+        eth.coinbase
+        eth.getbalance(eth.coinbase)
+        miner.start()
+        eth.getbalance(eth.coinbase)
+        miner.stop()
+
+
+
+
+
+
+
+
+Geth can also start with different command lines and without an interactive console
+
+
+geth --mine --nodiscover --maxpeers 1 --networkid 1984 --rpc --rpccorsdomain "*"
+
+
+--mine Enable mining
+--nodiscover Disables the peer discovery mechanism (manual peer addition)
+--maxpeers value Maximum number of network peers (network disabled if set to 0) (default: 25)
+--networkid value Network identifier (integer, 1=Frontier, 2=Morden (disused), 3=Ropsten) (default: 1)
+--rpc Enable the HTTP-RPC server
+--rpccorsdomain value Comma separated list of domains from which to accept cross origin requests (browser enforced)

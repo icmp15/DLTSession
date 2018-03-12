@@ -1,0 +1,22 @@
+﻿http://ibm.biz/BlockchainChaincodeCourse
+
+
+http://ibm.biz/QuickStartGuide
+
+
+
+
+Online playground
+https://blockchaindevelop.mybluemix.net/login
+https://blockchaindevelop.mybluemix.net/editor
+https://ibm-blockchain.github.io/develop/tutorials/playground-tutorial
+
+
+Local dev setup for the online playground:
+https://developer.ibm.com/blockchain/sandbox/
+
+
+
+
+Documentation … plus on how to setup Fabric on local machine
+http://hyperledger-fabric.readthedocs.io/en/latest/blockchain.html

@@ -1,0 +1,7 @@
+﻿$ echo -n hello | openssl dgst -sha256 -binary | openssl dgst -sha256
+
+
+## have to use the binary output for 2nd iteration.
+
+
+Double hashing prevents against length extension attack: https://en.wikipedia.org/wiki/Length_extension_attack
